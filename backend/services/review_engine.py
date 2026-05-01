@@ -65,6 +65,8 @@ async def review_chunk(chunk: DiffChunk, client: anthropic.AsyncAnthropic, modif
         results = _parse_response(text)
         _review_cache[cache_key] = results
         return results
+    except anthropic.AuthenticationError:
+        raise ValueError("Invalid API key — check ANTHROPIC_API_KEY in your .env file")
     except anthropic.APIError as e:
         print(f"Review engine error ({chunk.filename}:{chunk.start_line}): {e}")
         return []

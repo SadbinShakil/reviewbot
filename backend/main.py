@@ -42,7 +42,7 @@ def health():
         "status": "ok",
         "service": "ReviewBot",
         "github_token": "set" if has_github_token() else "missing (public repos only)",
-        "llm_key": "set" if os.getenv("ANTHROPIC_API_KEY", "") else "missing",
+        "llm_key": "set" if os.getenv("ANTHROPIC_API_KEY", "").startswith("sk-") else "missing",
     }
 
 
