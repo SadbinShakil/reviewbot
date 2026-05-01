@@ -8,7 +8,7 @@
 
 A GitHub Pull Request review bot that analyzes code diffs and posts inline comments on bugs, security issues, performance problems, and style violations. Tracks which comments get accepted or dismissed to improve review quality over time.
 
-![Dashboard Preview](https://placehold.co/900x420/111827/3b82f6?text=ReviewBot+Dashboard)
+![Dashboard Preview](./Dashboard.jpg)
 
 ---
 
