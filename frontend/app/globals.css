@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 255, 255, 255;
+  --background-start-rgb: 10, 10, 15;
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: rgb(var(--background-start-rgb));
+}
+
+.severity-critical {
+  @apply text-red-400 border-red-800 bg-red-950;
+}
+.severity-warning {
+  @apply text-yellow-400 border-yellow-800 bg-yellow-950;
+}
+.severity-suggestion {
+  @apply text-blue-400 border-blue-800 bg-blue-950;
+}
